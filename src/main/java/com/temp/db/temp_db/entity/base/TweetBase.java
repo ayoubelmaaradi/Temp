@@ -75,7 +75,7 @@ public class TweetBase implements RowMapper<Tweet>{
     private String author;
     private Date date;
     private BigDecimal latt;
-    private BigDecimal long;
+    private BigDecimal longi;
     private String sentiment;
 	
 	
@@ -89,8 +89,8 @@ public class TweetBase implements RowMapper<Tweet>{
 			obj.setText(rs.getString("Text"));
 			obj.setAuthor(rs.getString("author"));
 			obj.setDate(rs.getDate("date"));
-			obj.setLatt(rs.getDouble("latt"));
-			obj.setLong(rs.getDouble("long"));
+			obj.setLatt(rs.getBigDecimal("latt"));
+			obj.setLongi(rs.getBigDecimal("longi"));
 			obj.setSentiment(rs.getString("sentiment"));
 			
         	
@@ -142,13 +142,13 @@ public class TweetBase implements RowMapper<Tweet>{
 	public void setLatt(BigDecimal latt) {
 		this.latt = latt;
 	}
-	public BigDecimal getLong() {
-		return long;
+	public BigDecimal getLongi() {
+		return longi;
 	}
 
 
-	public void setLong(BigDecimal long) {
-		this.long = long;
+	public void setLongi(BigDecimal longi) {
+		this.longi = longi;
 	}
 	public String getSentiment() {
 		return sentiment;

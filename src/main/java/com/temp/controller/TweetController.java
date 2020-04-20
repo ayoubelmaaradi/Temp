@@ -37,6 +37,8 @@ import org.springframework.context.annotation.PropertySource;
 
 import com.temp.controller.base.TweetBaseController;
 
+import java.util.List;
+
 @RestController
 @PropertySource("classpath:${configfile.path}/Temp.properties")
 @RequestMapping(value="${endpoint.api}", headers = "Accept=application/json")
